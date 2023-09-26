@@ -52,6 +52,9 @@ def get_Ingredients(html):  # returns a list of ingedents seperated by a "|"
 
     ingredients = ""
     for i in range(n):
-        ingredients += ammounts[i].get_text + descrs[i].get_text + "|"
-        print(ingredients)
+        # Removes the newline char from str
+        clean_Amm = ammounts[i].get_text().replace("\n", "")
+        clean_Descr = descrs[i].get_text().replace("\n", "")
+        ingredients += "[" + clean_Amm + "] = " + clean_Descr + "|\n"
+
     return ingredients

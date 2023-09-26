@@ -63,7 +63,7 @@ for element in elements:
         print(f"\n\n###################### {i} ######################")
         print("Name: " + name)
         print("Img " + img_src)
-        print("ingredients " + ingredients)
+        print("ingredients:\n" + ingredients)
     else:
         print(f"\n\n###################### {i} ######################")
         print("NOT A RECIPE!!!")
